@@ -1,0 +1,34 @@
+get:
+  summary: Returns a single Experiment with the given ID.
+  operationId: getExperiment
+  tags:
+    - Experiments
+  parameters:
+    - $ref: ../components/parameters/ExperimentId.yaml
+  responses:
+    '200':
+      description: The contents of the given Experiment.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Experiment.yaml
+    default:
+      $ref: ../../common/components/responses/UnexpectedError.yaml
+put:
+  summary: Updates the experiment with the given ID.
+  operationId: updateExperiment
+  tags:
+    - Experiments
+  parameters:
+    - $ref: ../components/parameters/ExperimentId.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Experiment.yaml
+  responses:
+    '204':
+      description: Experiment was updated successfully.
+    default:
+      $ref: ../../common/components/responses/UnexpectedError.yaml

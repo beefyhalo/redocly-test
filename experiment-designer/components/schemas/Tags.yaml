@@ -1,0 +1,13 @@
+type: object
+description: A collection of tags that apply to a VM.
+required:
+  - cktTags
+  - simpleTags
+properties:
+  cktTags:
+    $ref: ./CktTags.yaml
+  simpleTags:
+    type: array
+    description: Simple string tags.
+    items:
+      type: string

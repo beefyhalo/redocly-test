@@ -1,0 +1,6 @@
+type: object
+properties:
+  rangeDef:
+    $ref: ./RangeDefinition.yaml
+  attackCampaign:
+    $ref: ./AttackCampaign.yaml

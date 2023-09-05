@@ -1,7 +1,11 @@
 # See https://redocly.com/docs/cli/configuration/ for more information.
 apis:
-  sample@v1: 
-    root: openapi/openapi.yaml
+  experiment-designer@v1:
+    root: experiment-designer/openapi.yaml
+  netspec@v1:
+    root: netspec/openapi.yaml
+  range@v1:
+    root: range/openapi.yaml
 extends:
   - recommended
 rules:
@@ -20,3 +24,13 @@ theme:
         - lang: JavaScript
         - lang: PHP
         - lang: Python
+
+
+
+
+
+
+
+
+
+

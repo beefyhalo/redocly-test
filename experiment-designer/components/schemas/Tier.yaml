@@ -1,0 +1,9 @@
+type: string
+description: >-
+  CKT tier defining how significant the target is (1 being the most
+  significant).
+enum:
+  - Tier1
+  - Tier2
+  - Tier3
+  - Tier4

@@ -1,0 +1,4 @@
+type: array
+description: Tags representing Cyber Key Terrain.
+items:
+  $ref: ./CktTag.yaml

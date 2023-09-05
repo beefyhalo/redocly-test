@@ -1,0 +1,12 @@
+type: object
+description: Specific version of a Network Specification.
+required:
+  - key
+  - message
+properties:
+  key:
+    type: string
+    description: The key for the NetSpec version. Unique within the context of a NetSpec.
+  message:
+    type: string
+    description: The update description for the NetSpec version.

@@ -1,0 +1,16 @@
+type: object
+description: Tags representing Cyber Key Terrain that can be used to direct attacks.
+required:
+  - target
+  - tier
+  - attackObjectives
+properties:
+  target:
+    $ref: ./Target.yaml
+  targetDetails:
+    type: string
+    description: Target details (optional, used for file path/process name).
+  tier:
+    $ref: ./Tier.yaml
+  attackObjectives:
+    $ref: ./AttackObjectives.yaml

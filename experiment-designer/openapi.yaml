@@ -1,0 +1,17 @@
+openapi: 3.0.0
+info:
+  version: 0.1.0
+  title: Stack Optimization API
+paths:
+  /experiments:
+    $ref: paths/experiments.yaml
+  /experiments/{experiment-id}:
+    $ref: paths/experiments_{experiment-id}.yaml
+  /experiments/{experiment-id}/runs:
+    $ref: paths/experiments_{experiment-id}_runs.yaml
+  /experiments/{experiment-id}/runs/{run-id}:
+    $ref: paths/experiments_{experiment-id}_runs_{run-id}.yaml
+  /experiments/{experiment-id}/runs/{run-id}/attacks:
+    $ref: paths/experiments_{experiment-id}_runs_{run-id}_attacks.yaml
+  /experiments/{experiment-id}/runs/{run-id}/range:
+    $ref: paths/experiments_{experiment-id}_runs_{run-id}_range.yaml

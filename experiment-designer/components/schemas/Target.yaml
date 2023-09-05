@@ -1,0 +1,10 @@
+type: string
+description: |
+  The target of the CKT:
+    * `EntireHost` - The entire host is the target.
+    * `File` - The target is a file (file path should be provided in the targetDetails).
+    * `Process` - The target is a process (process name should be provided in the targetDetails).
+enum:
+  - EntireHost
+  - File
+  - Process

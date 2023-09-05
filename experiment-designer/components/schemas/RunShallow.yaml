@@ -1,0 +1,19 @@
+type: object
+description: >-
+  A lightweight Run definition without associated its child details
+  (RangeDefinition, AttackCampaign).
+required:
+  - index
+  - name
+properties:
+  id:
+    type: string
+    format: uuid
+  index:
+    type: number
+    format: int32
+    description: Index of the run which defines the order of display and execution.
+  name:
+    type: string
+  description:
+    type: string

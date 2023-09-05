@@ -1,0 +1,6 @@
+allOf:
+  - $ref: ./RunShallow.yaml
+  - type: object
+    properties:
+      details:
+        $ref: ./RunDetails.yaml

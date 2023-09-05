@@ -1,0 +1,8 @@
+type: string
+description: >-
+  Security principal compromised by the attack upon successful execution,
+  expressed as an objective.
+enum:
+  - Confidentiality
+  - Integrity
+  - Availability

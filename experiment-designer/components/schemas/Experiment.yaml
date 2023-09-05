@@ -1,0 +1,14 @@
+type: object
+description: >-
+  A model that contains multiple runs that can each be executed and the results
+  compared.
+required:
+  - name
+properties:
+  id:
+    type: string
+    format: uuid
+  name:
+    type: string
+  description:
+    type: string

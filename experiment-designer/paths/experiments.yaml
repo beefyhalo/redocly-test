@@ -1,0 +1,33 @@
+get:
+  summary: Lists all available experiments.
+  operationId: listExperiments
+  tags:
+    - Experiments
+  parameters:
+    - $ref: ../../common/components/parameters/PageLimit.yaml
+    - $ref: ../../common/components/parameters/PageOffset.yaml
+  responses:
+    '200':
+      description: A paged list of Experiments.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Experiments.yaml
+    default:
+      $ref: ../../common/components/responses/UnexpectedError.yaml
+post:
+  summary: Creates a new Experiment.
+  operationId: createExperiment
+  tags:
+    - Experiments
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Experiment.yaml
+  responses:
+    '201':
+      description: Experiment was created successfully.
+    default:
+      $ref: ../../common/components/responses/UnexpectedError.yaml

@@ -1,0 +1,23 @@
+put:
+  summary: >-
+    Updates (or creates, if not already present) the RangeDefinition associated
+    to a Run.
+  operationId: updateRange
+  tags:
+    - Ranges
+  parameters:
+    - $ref: ../components/parameters/ExperimentId.yaml
+    - $ref: ../components/parameters/RunId.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/RangeDefinition.yaml
+  responses:
+    '201':
+      description: Range was created and associated to the Run successfully.
+    '204':
+      description: Range was replaced successfully.
+    default:
+      $ref: ../../common/components/responses/UnexpectedError.yaml

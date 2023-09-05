@@ -1,0 +1,7 @@
+type: object
+description: Represents an ordered set of attacks that will be executed as part of a run.
+required:
+  - attacks
+properties:
+  attacks:
+    $ref: ./AttackScenarios.yaml

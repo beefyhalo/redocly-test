@@ -1,0 +1,6 @@
+name: netspec-id
+in: path
+description: The unique identifier of the NetSpec.
+required: true
+schema:
+  type: string

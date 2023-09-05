@@ -1,0 +1,9 @@
+openapi: 3.0.0
+info:
+  version: 0.1.0
+  title: NetSpec Public API
+  description:
+    $ref: description.md
+paths:
+  /netspecs:
+    $ref: paths/netspecs.yaml

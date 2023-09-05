@@ -1,0 +1,7 @@
+name: run-id
+in: path
+required: true
+description: The unique identifier of the run as assigned by Stack Optimization.
+schema:
+  type: string
+  format: uuid

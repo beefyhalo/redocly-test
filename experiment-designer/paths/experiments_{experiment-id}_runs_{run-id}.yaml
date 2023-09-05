@@ -1,0 +1,39 @@
+get:
+  summary: Returns a single Run with the given ID.
+  operationId: getRun
+  tags:
+    - Runs
+  parameters:
+    - $ref: ../components/parameters/ExperimentId.yaml
+    - $ref: ../components/parameters/RunId.yaml
+  responses:
+    '200':
+      description: Expected response to a valid request.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Run.yaml
+    default:
+      $ref: ../../common/components/responses/UnexpectedError.yaml
+put:
+  summary: >-
+    Updates the basic information on a Run for an Experiment.  This does not
+    update associated data (Attacks, Ranges) of the run - use attack/range
+    specific endpoints for updating this data.
+  operationId: updateRun
+  tags:
+    - Runs
+  parameters:
+    - $ref: ../components/parameters/ExperimentId.yaml
+    - $ref: ../components/parameters/RunId.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/RunShallow.yaml
+  responses:
+    '201':
+      description: Run was updated successfully.
+    default:
+      $ref: ../../common/components/responses/UnexpectedError.yaml

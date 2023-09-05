@@ -1,0 +1,24 @@
+type: object
+description: Summary of a Network Specification used for provisioning a range.
+required:
+  - id
+  - name
+  - isPublic
+  - versions
+properties:
+  id:
+    type: string
+    format: uuid
+  name:
+    type: string
+    description: The name of the Network Specification.
+  description:
+    type: string
+    description: The long description of the Network Specification
+  isPublic:
+    type: boolean
+    description: Flag that determines if the NetSpec is available to all Organizations.
+  versions:
+    type: array
+    items:
+      $ref: ./NetSpecVersionSummary.yaml

@@ -1,0 +1,18 @@
+type: object
+required:
+  - index
+  - attackId
+properties:
+  id:
+    type: string
+    format: uuid
+    description: The unique identifier of the Attack Scenario instance.
+  index:
+    type: number
+    format: int16
+    description: Index representing the order the attack will be executed in.
+  attackId:
+    type: string
+    description: >-
+      The unique identifier of the Attack as assigned by the external attack
+      execution platform.

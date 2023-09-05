@@ -1,0 +1,44 @@
+post:
+  summary: Creates one or more Attack Scenarios and associates them to the given Run.
+  operationId: createAttackScenarios
+  tags:
+    - Scenarios
+  parameters:
+    - $ref: ../components/parameters/ExperimentId.yaml
+    - $ref: ../components/parameters/RunId.yaml
+    - $ref: ../components/parameters/AttackId.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/AttackScenarios.yaml
+  responses:
+    '201':
+      description: Attack Scenarios were created successfully.
+    default:
+      $ref: ../../common/components/responses/UnexpectedError.yaml
+put:
+  summary: Replaces the list of Attack Scenarios associated to a Run.
+  operationId: updateAttackScenarios
+  tags:
+    - Scenarios
+  parameters:
+    - $ref: ../components/parameters/ExperimentId.yaml
+    - $ref: ../components/parameters/RunId.yaml
+    - $ref: ../components/parameters/AttackId.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/AttackScenarios.yaml
+  responses:
+    '201':
+      description: >-
+        Attack Scenario list was replaced successfully and new Attack Scenarios
+        were created.
+    '204':
+      description: Attack Scenario list was replaced successfully.
+    default:
+      $ref: ../../common/components/responses/UnexpectedError.yaml

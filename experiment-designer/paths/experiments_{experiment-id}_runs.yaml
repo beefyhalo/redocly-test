@@ -1,0 +1,36 @@
+get:
+  summary: Lists all runs associated with a given experiment.
+  operationId: getRuns
+  tags:
+    - Runs
+  parameters:
+    - $ref: ../components/parameters/ExperimentId.yaml
+    - $ref: ../../common/components/parameters/PageLimit.yaml
+    - $ref: ../../common/components/parameters/PageOffset.yaml
+  responses:
+    '200':
+      description: Expected response to a valid request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Runs.yaml
+    default:
+      $ref: ../../common/components/responses/UnexpectedError.yaml
+post:
+  summary: Creates a new Run for a given Experiment.
+  operationId: createRun
+  tags:
+    - Runs
+  parameters:
+    - $ref: ../components/parameters/ExperimentId.yaml
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Run.yaml
+  responses:
+    '201':
+      description: Run was created successfully.
+    default:
+      $ref: ../../common/components/responses/UnexpectedError.yaml

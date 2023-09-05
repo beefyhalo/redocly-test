@@ -1,0 +1,8 @@
+name: attack-id
+in: path
+description: >-
+  The unique identifier of the Attack as assigned by the external attack
+  execution platform.
+required: true
+schema:
+  type: string

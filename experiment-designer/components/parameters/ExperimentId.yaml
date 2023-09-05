@@ -1,0 +1,7 @@
+name: experiment-id
+in: path
+description: The unique identifier of the Experiment as assigned by Stack Optimization.
+required: true
+schema:
+  type: string
+  format: uuid
